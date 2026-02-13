@@ -19,5 +19,7 @@ App web que busca películas usando la API de OMDb.
 - OMDb API
 
 ## Demo
-(pon aquí tu enlace cuando actives GitHub Pages)
-![Captura](captura.png)
+https://kinigarcia81-collab.github.io/peliculas_app/
+
+
+[Captura](captura.png)
