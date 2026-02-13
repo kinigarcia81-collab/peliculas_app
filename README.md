@@ -20,3 +20,4 @@ App web que busca películas usando la API de OMDb.
 
 ## Demo
 (pon aquí tu enlace cuando actives GitHub Pages)
+![Captura](captura.png)
