@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscador de Películas</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <h1>Buscador de Películas</h1>
+
+  <div class="barra">
+    <input type="text" id="busqueda" placeholder="Escribe una película...">
+    <input type="text" id="anio" placeholder="Año (opcional)">
+    <select id="orden">
+  <option value="relevancia">Orden: relevancia</option>
+  <option value="anio_desc">Año: nuevo → viejo</option>
+  <option value="anio_asc">Año: viejo → nuevo</option>
+  <option value="titulo_az">Título: A → Z</option>
+  <option value="titulo_za">Título: Z → A</option>
+</select>
+
+    <button id="btnBuscar" type="button">Buscar</button>
+    <button id="btnLimpiar" type="button">Limpiar</button>
+    <button id="btnModo" type="button">Modo oscuro</button>
+  </div>
+
+  <p id="mensaje"></p>
+
+  <div class="layout">
+    <section>
+      <h2>Detalles</h2>
+      <div id="detalles"></div>
+    </section>
+
+    <section>
+      <h2>Resultados</h2>
+      <div id="resultados"></div>
+     <div class="paginacion">
+  <button id="btnPrev" type="button">◀ Anterior</button>
+  <span id="infoPagina">Página 1</span>
+  <button id="btnNext" type="button">Siguiente ▶</button>
+</div>
+
+      <h2>Favoritos</h2>
+      <div id="favoritos"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+

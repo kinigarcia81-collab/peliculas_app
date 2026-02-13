@@ -1,0 +1,142 @@
+/* ===== BASE ===== */
+body{
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;   /* CLARO por defecto */
+  color: #111;
+}
+
+h1{
+  margin-top: 20px;
+  font-size: 42px;
+  letter-spacing: 1px;
+}
+
+h2{
+  text-align: left;
+  max-width: 1200px;
+  margin: 20px auto 10px;
+  padding: 0 10px;
+}
+
+.barra{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 10px 0 20px;
+  padding: 0 10px;
+}
+
+#anio { width: 130px; }
+
+input, select{
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+/* ===== LAYOUT 2 COLUMNAS ===== */
+.layout{
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 20px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px 30px;
+}
+
+@media (max-width: 900px){
+  .layout{ grid-template-columns: 1fr; }
+}
+
+/* ===== REJILLA DE RESULTADOS/FAVORITOS ===== */
+#resultados, #favoritos{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* ===== TARJETAS ===== */
+.card{
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  width: 100%;
+  transform: translateY(8px);
+  opacity: 0;
+  animation: aparecer 250ms ease-out forwards;
+}
+
+img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Hover tipo “Netflix” */
+.card:hover{
+  transform: scale(1.03);
+  transition: transform 150ms ease;
+}
+
+/* ===== BOTONES ===== */
+button{
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:disabled{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ===== PAGINACIÓN ===== */
+.paginacion{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0 30px;
+}
+
+#infoPagina{ font-weight: bold; }
+
+/* ===== ANIMACIÓN ===== */
+@keyframes aparecer{
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ===== MODO OSCURO (SOLO cuando hay clase) ===== */
+body.oscuro{
+  background: #141414;
+  color: #f0f0f0;
+}
+
+body.oscuro .card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: none;
+}
+
+body.oscuro input, body.oscuro select{
+  background: #2a2a2a;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+body.oscuro button{
+  background: #444;
+  color: white;
+}
